@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import butter from './butter-client';
+
 
 function App() {
+
+  const [fetchData, setFetchData] = useState('');
+
+  useEffect(() => {
+    butter.post.list({page: 1, page_size: 10})
+    .then(function(response) {
+      setFetchData(response)
+    })
+  }, []);
+
+  console.log(fetchData)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {fetchData === '' ? 'Data not loaded!' : 'Data Loaded'}
     </div>
   );
 }
