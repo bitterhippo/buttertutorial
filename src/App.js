@@ -32,7 +32,7 @@ function App() {
             <Post 
               key={currentPost.created}
               title={currentPost.title}
-              body={currentPost.summary}
+              summary={currentPost.summary}
             />)
           }
         </div>

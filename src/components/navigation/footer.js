@@ -1,16 +1,29 @@
 import React from 'react';
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div>
-      This is the footer
+    <div style={style.footerWrapper}>
+      <div>
+        Terms
+      </div>
+      <div>
+        Privacy Policy
+      </div>
+      <div>
+        Contact
+      </div>
+      <div>
+        hello@xplenty.com
+      </div>
     </div>
   )
 };
 
 const syles = {
+  footerWrapper: {
 
+  }
 };
 
-export default footer;
+export default Footer;
 
