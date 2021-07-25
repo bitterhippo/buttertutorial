@@ -26,7 +26,7 @@ function App() {
     return (
       <div>
         <NavHeader />
-        <ImageBanner />
+        <ImageBanner message={'filler text'}/>
         <div style={styles.postList}>
           {
             fetchData.data.data.map(currentPost => 
