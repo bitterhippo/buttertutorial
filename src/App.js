@@ -3,6 +3,7 @@ import butter from './butter-client';
 
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
+import Footer from './components/navigation/Footer';
 import NavHeader from './components/navigation/NavHeader';
 import Post from './components/Post/Post';
 
@@ -36,6 +37,7 @@ function App() {
             />)
           }
         </div>
+        <Footer />
       </div>
     )
   };
