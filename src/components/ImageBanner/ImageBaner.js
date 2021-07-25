@@ -13,14 +13,12 @@ const ImageBanner = ({ message }) => {
 
 const styles = {
   imgBannerWrapper: {
-    width: '100%',
-    height: '10vh',
-    marginTop: 10
+    marginTop: 10,
   },
   image: {
     opacity: 1,
     width: '100%',
-    height: '10vh'
+    height: '26vh'
   }
 };
 

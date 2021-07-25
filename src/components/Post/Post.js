@@ -6,7 +6,7 @@ const Post = ({ title, summary}) => {
   console.log(title, summary);
 
   return (
-    <div>
+    <div style={styles.postWrapper}>
       <h3 style={{...styles.text, ...styles.title}}>{title}</h3>
       <span style={styles.body}>{summary}</span>
     </div>
@@ -14,6 +14,9 @@ const Post = ({ title, summary}) => {
 };
 
 const styles = {
+  postWrapper: {
+    textAlign: 'left'
+  },
   text: {
     color : Colors.TextBody
   },

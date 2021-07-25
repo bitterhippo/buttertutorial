@@ -8,13 +8,13 @@ const Footer = () => {
         <div style={styles.footerNavItem}>
           Terms
         </div>
-        <div>
+        <div style={styles.footerNavItem}>
           Privacy Policy
         </div>
-        <div>
+        <div style={styles.footerNavItem}>
           Contact
         </div>
-        <div>
+        <div style={styles.footerNavItem}>
           hello@xplenty.com
         </div>
       </div>
@@ -25,18 +25,22 @@ const Footer = () => {
 const styles = {
   footerWrapper: {
     backgroundColor: Colors.Highlights,
-    height: '5vh',
+    height: '6.5vh',
+    position: 'fixed',
+    bottom: '0',
+    width: '100%'
   },
   footerNav: {
     display: 'flex',
     flexDirection: 'row',
     marginLeft: '7.5vw',
     gap: 10,
+    height: '100%'
   },
   footerNavItem: {
     marginTop: 'auto',
     marginBottom: 'auto',
-    color: 'white'
+    color: 'white',
   }
 };
 

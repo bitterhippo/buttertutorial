@@ -27,7 +27,7 @@ function App() {
       <div>
         <NavHeader />
         <ImageBanner />
-        <div>
+        <div style={styles.postList}>
           {
             fetchData.data.data.map(currentPost => 
             <Post 
@@ -50,7 +50,10 @@ function App() {
 };
 
 const styles = {
-
+  postList: {
+    marginTop: 30,
+    marginLeft: '7.5vw'
+  }
 }
 
 export default App;
