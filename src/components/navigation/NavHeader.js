@@ -1,4 +1,5 @@
 import React from 'react';
+import Colors from '../Colors';
 
 const NavHeader = () => {
   return (
@@ -28,7 +29,7 @@ const NavHeader = () => {
           Sign In
         </div>
         <div>
-          GET STARTED
+          <button style={styles.button}>GET STARTED</button>
         </div>
       </div>
     </div>
@@ -41,7 +42,7 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: 'white',
-    border: '2px solid gray'
+    border: `2px solid ${Colors.TextPrimary}`
   },
   navBarContent: {
     display: 'flex',
@@ -60,6 +61,10 @@ const styles = {
     gap: '2vw',
     height: '3vh',
     marginRight: '3vh'
+  },
+  button: {
+    backgroundColor: Colors.Button,
+    color: 'white'
   }
 }
 
