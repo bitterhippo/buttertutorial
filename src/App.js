@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import butter from './butter-client';
 
+//Component imports
+import imgBanner from './components/imgBanner/imgBanner';
+import footer from './components/navigation/footer';
+import NavHeader from './components/navigation/NavHeader';
+import posts from './components/posts/posts';
 
 function App() {
 
@@ -13,13 +18,25 @@ function App() {
     })
   }, []);
 
-  console.log(fetchData)
+
+  // This is a subrender function that enables the main content to be rendered once the neccesary JSON data is fetched from butter.
+  const content = () => {
+    return (
+      <div>
+        <NavHeader />
+      </div>
+    )
+  };
 
   return (
-    <div className="App">
-      {fetchData === '' ? 'Data not loaded!' : 'Data Loaded'}
+    <div>
+      {fetchData === '' ? 'Data not loaded!' : content()}
     </div>
   );
+};
+
+const styles = {
+
 }
 
 export default App;
