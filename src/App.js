@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import butter from './butter-client';
 
 //Component imports
-import imgBanner from './components/imgBanner/imgBanner';
-import footer from './components/navigation/footer';
+import ImageBanner from './components/ImageBanner/ImageBaner';
 import NavHeader from './components/navigation/NavHeader';
-import posts from './components/posts/posts';
+import Post from './components/Post/Post';
 
 function App() {
 
@@ -18,20 +17,33 @@ function App() {
     })
   }, []);
 
+  console.log(fetchData);
+
 
   // This is a subrender function that enables the main content to be rendered once the neccesary JSON data is fetched from butter.
   const content = () => {
     return (
       <div>
         <NavHeader />
+        <ImageBanner />
+        <div>
+          {
+            fetchData.data.data.map(currentPost => 
+            <Post 
+              key={currentPost.created}
+              title={currentPost.title}
+              body={currentPost.summary}
+            />)
+          }
+        </div>
       </div>
     )
   };
 
   return (
-    <div>
+    <>
       {fetchData === '' ? 'Data not loaded!' : content()}
-    </div>
+    </>
   );
 };
 
