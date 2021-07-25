@@ -11,9 +11,9 @@ const ImageBanner = ({ message }) => {
       <div style={styles.text}>{message}
       </div>
       <div style={styles.buttonList}>
-          <button style={{...styles.button, ...styles.buttonCallToAction}}>Secure My Data</button>
-          <button style={{...styles.button, ...styles.buttonCallToNotAction}}>Take A Chance</button>
-        </div>
+        <button style={{ ...styles.button, ...styles.buttonCallToAction }}>Secure My Data</button>
+        <button style={{ ...styles.button, ...styles.buttonCallToNotAction }}>Take A Chance</button>
+      </div>
     </div>
   )
 };
@@ -31,32 +31,35 @@ const styles = {
   text: {
     position: 'absolute',
     textAlign: 'center',
-    top: '20%',
+    top: '15%',
     marginLeft: '12.5vw',
     fontWeight: 'bold',
     color: 'white',
-    fontSize: 32
+    fontSize: 30
   },
   buttonList: {
     display: 'flex',
     flexDirection: 'row',
     position: 'absolute',
-    top: '70%',
+    top: '60%',
     marginLeft: '12.5vw',
-    gap: '3vw'
+    gap: '0.5vw'
   },
   button: {
     border: 'none',
     height: '3vh',
     borderRadius: '4px',
-    paddingLeft: '1vw',
-    paddingRight: '1vw'
+    paddingLeft: '1.5vw',
+    paddingRight: '1.5vw',
+    fontWeight: 'bold',
+    fontSize: 12
   },
   buttonCallToAction: {
     backgroundColor: Colors.CallToAction,
     border: 'none'
   },
   buttonCallToNotAction: {
+    backgroundColor: '#11ffee00',
     color: 'white',
     border: '1px solid white'
   }
