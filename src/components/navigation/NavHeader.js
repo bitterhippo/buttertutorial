@@ -6,7 +6,7 @@ const NavHeader = () => {
     <div style={styles.navWrapper}>
       <div style={styles.navBarContent}>
         <div>
-          Xplenty
+          <span style={{ fontWeight: 'bold' }}>Xplenty</span>
         </div>
         <div>
           Product
@@ -42,7 +42,6 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: 'white',
-    border: `2px solid ${Colors.TextPrimary}`
   },
   navBarContent: {
     display: 'flex',
@@ -64,7 +63,12 @@ const styles = {
   },
   button: {
     backgroundColor: Colors.Button,
-    color: 'white'
+    color: 'white',
+    borderRadius: 4,
+    border: 'none',
+    height: '2.5vh',
+    boxShadow: '0px 2px 7px #00000033',
+    opacity: 1
   }
 }
 

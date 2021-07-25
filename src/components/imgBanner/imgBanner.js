@@ -3,7 +3,7 @@ import React from 'react';
 const imgBanner = props => {
   return (
     <div>
-      imgBanner
+      <img src={'./logo192.png'}/>
     </div>
   )
 };
