@@ -37,7 +37,7 @@ const styles = {
     height: '15vh',
     width: '100%',
     borderBottom: `1px solid ${Colors.TextBody}`,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   logoList: {
     marginTop: '5vh',
@@ -52,11 +52,13 @@ const styles = {
     fontWeight: 'bold',
     color: Colors.TextBody,
     opacity: 0.4,
-    marginTop: '2.5vh'
+    marginTop: '2.5vh',
+    fontFamily: 'Open Sans'
   },
   logoItem: {
     fontSize: 18,
-    color: Colors.TextBody
+    color: Colors.TextBody,
+    fontFamily: 'Open Sans'
   }
 };
 

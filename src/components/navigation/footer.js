@@ -35,7 +35,8 @@ const styles = {
     flexDirection: 'row',
     marginLeft: '7.5vw',
     gap: 20,
-    height: '100%'
+    height: '100%',
+    fontFamily: 'Open Sans'
   },
   footerNavItem: {
     marginTop: 'auto',

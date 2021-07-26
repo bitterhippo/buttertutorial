@@ -37,7 +37,8 @@ const styles = {
     marginLeft: '12.5vw',
     fontWeight: 'bold',
     color: 'white',
-    fontSize: 48
+    fontSize: 48,
+    fontFamily: "Open Sans"
   },
   buttonList: {
     display: 'flex',

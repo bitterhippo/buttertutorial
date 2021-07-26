@@ -6,30 +6,30 @@ const NavHeader = () => {
     <div style={styles.navWrapper}>
       <div style={styles.navBarContent}>
         <div>
-          <span style={{ fontWeight: 'bold' }}>Xplenty</span>
+          <span style={{ fontWeight: 'bold', ...styles.text }}>Xplenty</span>
         </div>
-        <div>
+        <div style={styles.text}>
           Product
         </div>
-        <div>
+        <div style={styles.text}>
           Integrations
         </div>
-        <div>
+        <div style={styles.text}>
           Solutions
         </div>
-        <div>
+        <div style={styles.text}>
           Resources
         </div>
       </div>
       <div style={styles.navBarConfiguration}>
-        <div>
+        <div style={styles.text}>
           Language
         </div>
-        <div>
+        <div style={styles.text}>
           Sign In
         </div>
         <div>
-          <button style={styles.button}>GET STARTED</button>
+          <button style={{...styles.button, ...styles.text}}>GET STARTED</button>
         </div>
       </div>
     </div>
@@ -69,6 +69,9 @@ const styles = {
     height: '2.5vh',
     boxShadow: '0px 2px 7px #00000033',
     opacity: 1
+  },
+  text: {
+    fontFamily: 'Open Sans'
   }
 }
 

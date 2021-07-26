@@ -60,8 +60,9 @@ function App() {
 
 const styles = {
   postList: {
-    marginTop: 30,
-    marginLeft: '7.5vw'
+    marginTop: 40,
+    marginLeft: '7.5vw',
+    marginRight: '7.5vw',
   }
 }
 
