@@ -26,24 +26,24 @@ const styles = {
   image: {
     opacity: 1,
     width: '100%',
-    height: '42vh',
+    height: '50vh',
     objectFit: 'cover'
   },
   text: {
-    width: '25%',
+    width: '35%',
     position: 'absolute',
     textAlign: 'left',
-    top: '5%',
+    top: '15%',
     marginLeft: '12.5vw',
     fontWeight: 'bold',
     color: 'white',
-    fontSize: 36
+    fontSize: 48
   },
   buttonList: {
     display: 'flex',
     flexDirection: 'row',
     position: 'absolute',
-    top: '55%',
+    top: '65%',
     marginLeft: '12.5vw',
     gap: '0.5vw'
   },

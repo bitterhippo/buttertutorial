@@ -34,7 +34,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     marginLeft: '7.5vw',
-    gap: 10,
+    gap: 20,
     height: '100%'
   },
   footerNavItem: {
