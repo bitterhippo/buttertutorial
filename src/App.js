@@ -3,6 +3,7 @@ import butter from './butter-client';
 
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
+import SponseredBanner from './components/SponseredBanner/SponseredBanner';
 import Footer from './components/navigation/Footer';
 import NavHeader from './components/navigation/NavHeader';
 import Post from './components/Post/Post';
@@ -10,31 +11,39 @@ import Post from './components/Post/Post';
 function App() {
 
   const [fetchData, setFetchData] = useState('');
+  const [bannerMessage, setBannerMessage] = useState('');
 
   useEffect(() => {
-    butter.post.list({page: 1, page_size: 10})
-    .then(function(response) {
-      setFetchData(response)
-    })
+    butter.post.list({ page: 1, page_size: 10 })
+      .then(function (response) {
+        setBannerMessage(response.data.data.shift());
+        setFetchData(response);
+      })
   }, []);
 
+  console.log(bannerMessage);
   console.log(fetchData);
 
 
   // This is a subrender function that enables the main content to be rendered once the neccesary JSON data is fetched from butter.
   const content = () => {
+
+    console.log(bannerMessage);
+
     return (
       <div>
         <NavHeader />
-        <ImageBanner message={'filler text'}/>
+        <ImageBanner message={bannerMessage.title} />
+        <SponseredBanner />
         <div style={styles.postList}>
           {
             fetchData.data.data.map(currentPost => 
-            <Post 
-              key={currentPost.created}
-              title={currentPost.title}
-              summary={currentPost.summary}
-            />)
+              <Post
+                key={currentPost.created}
+                title={currentPost.title}
+                summary={currentPost.summary}
+              />
+            )   
           }
         </div>
         <Footer />

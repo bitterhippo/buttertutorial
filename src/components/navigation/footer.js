@@ -24,9 +24,9 @@ const Footer = () => {
 
 const styles = {
   footerWrapper: {
+    marginTop: '7vh',
     backgroundColor: Colors.Highlights,
     height: '6.5vh',
-    position: 'fixed',
     bottom: '0',
     width: '100%'
   },

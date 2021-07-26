@@ -26,33 +26,35 @@ const styles = {
   image: {
     opacity: 1,
     width: '100%',
-    height: '26vh'
+    height: '42vh',
+    objectFit: 'cover'
   },
   text: {
+    width: '25%',
     position: 'absolute',
-    textAlign: 'center',
-    top: '15%',
+    textAlign: 'left',
+    top: '5%',
     marginLeft: '12.5vw',
     fontWeight: 'bold',
     color: 'white',
-    fontSize: 30
+    fontSize: 36
   },
   buttonList: {
     display: 'flex',
     flexDirection: 'row',
     position: 'absolute',
-    top: '60%',
+    top: '55%',
     marginLeft: '12.5vw',
     gap: '0.5vw'
   },
   button: {
     border: 'none',
-    height: '3vh',
+    height: '6vh',
     borderRadius: '4px',
-    paddingLeft: '1.5vw',
-    paddingRight: '1.5vw',
+    paddingLeft: '2vw',
+    paddingRight: '2vw',
     fontWeight: 'bold',
-    fontSize: 12
+    fontSize: 16
   },
   buttonCallToAction: {
     backgroundColor: Colors.CallToAction,
