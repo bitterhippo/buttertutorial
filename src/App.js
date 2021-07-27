@@ -35,10 +35,14 @@ function App() {
     return (
       <div>
         <NavHeader />
-        <CSSTransitionGroup>
-          <ImageBanner message={bannerMessage.title} />
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+          <ImageBanner message={bannerMessage.title}/>
         </CSSTransitionGroup>
-
         <SponseredBanner />
         <div style={styles.postList}>
           {
