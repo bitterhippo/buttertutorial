@@ -22,15 +22,17 @@ const styles = {
   imgBannerWrapper: {
     marginTop: 10,
     position: 'relative',
+    padding: 0,
+    width: '100%'
   },
   image: {
     opacity: 1,
     width: '100%',
-    height: '50vh',
+    height: '45vh',
     objectFit: 'cover'
   },
   text: {
-    width: '35%',
+    width: '40%',
     position: 'absolute',
     textAlign: 'left',
     top: '15%',

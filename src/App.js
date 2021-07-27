@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import butter from './butter-client';
 import './App.css';
-import { Transition, animated } from 'react-spring'
 
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
@@ -10,11 +9,11 @@ import Footer from './components/navigation/Footer';
 import NavHeader from './components/navigation/NavHeader';
 import Post from './components/Post/Post';
 
-
 function App() {
 
   const [fetchData, setFetchData] = useState('');
   const [bannerMessage, setBannerMessage] = useState('');
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     butter.post.list({ page: 1, page_size: 10 })
@@ -24,22 +23,27 @@ function App() {
       })
   }, []);
 
-  console.log(bannerMessage);
-  console.log(fetchData);
-
-
   // This is a subrender function that enables the main content to be rendered once the neccesary JSON data is fetched from butter.
   const content = () => {
-
-    console.log(bannerMessage);
 
     return (
       <div>
         <NavHeader />
-        <ImageBanner 
-        message={bannerMessage.title} 
-        image={'./MaskGroup5.png'}
-        />
+        <div
+          style={styles.bannerBox}
+          onMouseEnter={() => setToggle(!toggle)}
+          onMouseLeave={() => setToggle(!toggle)}
+        >
+          {
+            toggle === false ? <ImageBanner
+              message={bannerMessage.title}
+              image={'./MaskGroup5.png'}
+            /> : <ImageBanner
+              message={bannerMessage.title}
+              image={'./MaskGroup4.png'}
+            />
+          }
+        </div>
         <SponseredBanner />
         <div style={styles.postList}>
           {
@@ -69,7 +73,11 @@ const styles = {
     marginTop: 40,
     marginLeft: '7.5vw',
     marginRight: '7.5vw',
-  }
+  },
+  bannerBox: {
+    height: '45vh',
+    width: '100%',
+  },
 }
 
 export default App;
