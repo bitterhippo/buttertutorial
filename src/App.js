@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import butter from './butter-client';
+import './App.css';
 import { CSSTransitionGroup } from 'react-transition-group';
 
 //Component imports

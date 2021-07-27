@@ -8,24 +8,24 @@ const NavHeader = () => {
         <div>
           <span style={{ fontWeight: 'bold', ...styles.text }}>Xplenty</span>
         </div>
-        <div style={styles.text}>
+        <div>
           Product
         </div>
-        <div style={styles.text}>
+        <div >
           Integrations
         </div>
-        <div style={styles.text}>
+        <div>
           Solutions
         </div>
-        <div style={styles.text}>
+        <div >
           Resources
         </div>
       </div>
       <div style={styles.navBarConfiguration}>
-        <div style={styles.text}>
+        <div>
           Language
         </div>
-        <div style={styles.text}>
+        <div>
           Sign In
         </div>
         <div>
@@ -69,9 +69,6 @@ const styles = {
     height: '2.5vh',
     boxShadow: '0px 2px 7px #00000033',
     opacity: 1
-  },
-  text: {
-    fontFamily: 'Open Sans'
   }
 }
 

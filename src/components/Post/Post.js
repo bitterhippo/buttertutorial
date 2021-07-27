@@ -14,7 +14,6 @@ const Post = ({ title, summary}) => {
 const styles = {
   text: {
     color: Colors.TextBody,
-    fontFamily: 'Open Sans',
     opacity: 1
   },
   title: {

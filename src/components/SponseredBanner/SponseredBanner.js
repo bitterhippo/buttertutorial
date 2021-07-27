@@ -53,12 +53,10 @@ const styles = {
     color: Colors.TextBody,
     opacity: 0.4,
     marginTop: '2.5vh',
-    fontFamily: 'Open Sans'
   },
   logoItem: {
     fontSize: 18,
     color: Colors.TextBody,
-    fontFamily: 'Open Sans'
   }
 };
 

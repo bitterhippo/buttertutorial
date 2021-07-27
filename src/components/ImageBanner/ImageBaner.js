@@ -38,7 +38,6 @@ const styles = {
     fontWeight: 'bold',
     color: 'white',
     fontSize: 48,
-    fontFamily: "Open Sans"
   },
   buttonList: {
     display: 'flex',
