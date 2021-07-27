@@ -1,7 +1,7 @@
 import React from 'react';
 import Colors from '../Colors';
 
-const Footer = () => {
+const FooterNav = () => {
   return (
     <div style={styles.footerWrapper}>
       <div style={styles.footerNav}>
@@ -44,5 +44,5 @@ const styles = {
   }
 };
 
-export default Footer;
+export default FooterNav;
 

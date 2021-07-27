@@ -5,7 +5,7 @@ import './App.css';
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
 import SponseredBanner from './components/SponseredBanner/SponseredBanner';
-import Footer from './components/navigation/Footer';
+import FooterNav from './components/navigation/FooterNav';
 import NavHeader from './components/navigation/NavHeader';
 import Post from './components/Post/Post';
 
@@ -56,7 +56,7 @@ function App() {
             )
           }
         </div>
-        <Footer />
+        <FooterNav />
       </div>
     )
   };
