@@ -1,10 +1,4 @@
-##Notes.
-
-###Date.
-
-1:49 AM PST, Wednesday the 28th of July.
-
-###Location of deployedapplication.
+### Location of Deployment.
 
 https://buttertutorial-n0trf5lj4-bitterhippo.vercel.app/
 
