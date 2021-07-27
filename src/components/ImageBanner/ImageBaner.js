@@ -1,13 +1,13 @@
 import React from 'react';
 import Colors from '../Colors';
 
-const ImageBanner = ({ message }) => {
+const ImageBanner = ({ message, image }) => {
   return (
     <div style={styles.imgBannerWrapper}>
       <img
         alt="A back drop of buildings meant to represent commerce."
         style={styles.image}
-        src={'./MaskGroup5.png'} />
+        src={image} />
       <div style={styles.text}>{message}
       </div>
       <div style={styles.buttonList}>

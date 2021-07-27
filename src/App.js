@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import butter from './butter-client';
 import './App.css';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { Transition, animated } from 'react-spring'
 
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
@@ -36,14 +36,10 @@ function App() {
     return (
       <div>
         <NavHeader />
-        <CSSTransitionGroup
-          transitionName="example"
-          transitionAppear={true}
-          transitionAppearTimeout={500}
-          transitionEnter={false}
-          transitionLeave={false}>
-          <ImageBanner message={bannerMessage.title}/>
-        </CSSTransitionGroup>
+        <ImageBanner 
+        message={bannerMessage.title} 
+        image={'./MaskGroup5.png'}
+        />
         <SponseredBanner />
         <div style={styles.postList}>
           {
