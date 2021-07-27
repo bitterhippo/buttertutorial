@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import butter from './butter-client';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 //Component imports
 import ImageBanner from './components/ImageBanner/ImageBaner';
@@ -7,6 +8,7 @@ import SponseredBanner from './components/SponseredBanner/SponseredBanner';
 import Footer from './components/navigation/Footer';
 import NavHeader from './components/navigation/NavHeader';
 import Post from './components/Post/Post';
+
 
 function App() {
 
@@ -33,17 +35,20 @@ function App() {
     return (
       <div>
         <NavHeader />
-        <ImageBanner message={bannerMessage.title} />
+        <CSSTransitionGroup>
+          <ImageBanner message={bannerMessage.title} />
+        </CSSTransitionGroup>
+
         <SponseredBanner />
         <div style={styles.postList}>
           {
-            fetchData.data.data.map(currentPost => 
+            fetchData.data.data.map(currentPost =>
               <Post
                 key={currentPost.created}
                 title={currentPost.title}
                 summary={currentPost.summary}
               />
-            )   
+            )
           }
         </div>
         <Footer />

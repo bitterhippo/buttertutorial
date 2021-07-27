@@ -6,7 +6,7 @@ const Post = ({ title, summary}) => {
   return (
     <div style={styles.postWrapper}>
       <h1 style={{...styles.text, ...styles.title}}>{title}</h1>
-      <span style={{...styles.body, ...styles.test}}>{summary}</span>
+      <span style={{...styles.body, ...styles.text}}>{summary}</span>
     </div>
   )
 };
